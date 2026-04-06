@@ -1,0 +1,105 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+header,footer{
+    width: 100dvw;
+    height: 150px;
+    background-image:linear-gradient(to left, #261b00,#d1a861);
+    color: burlywood;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/*styling links*/
+a:link{
+    color: white;
+
+
+}
+a:visited{
+
+    color: rgb(250, 244, 244);
+    
+}
+a:hover{
+    background-color: #d1a861;
+    color: white;
+
+
+}
+a:active{
+    background-color: brown;
+    color: white;
+
+
+}
+/*adjust nav links horizontally*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+header{
+    position: fixed;
+}
+/*styling button*/
+button:hover{
+    transform: scale(1.5) rotate(10deg);
+    transition: transform 2s ease-in-out;
+} /*styling section background*/
+section{
+    margin-top: 0;
+    background-image: url("/image/foodcontact.jpg");
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 720px;
+    padding-top: 200px;
+    color: #926a06;
+    
+
+
+
+}
+button{
+    margin:20px 100px;
+}
+@media screen and (max-width:768px) {
+
+    /* 1. Header & Footer adjustments */
+    header, footer {
+        height: auto; 
+        padding: 20px;
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    /* 2. Navigation adjustments */
+    nav {
+        flex-direction: column; 
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 3. Section adjustments */
+    section {
+        padding-top: 300px; 
+        min-height: 100vh;
+        background-attachment: scroll; 
+        color: black;
+    }
+
+    /* 4. Button interaction */
+    button:hover {
+        transform: scale(1.1) rotate(0deg); 
+    }
+
+
+    
+}
+

@@ -1,0 +1,168 @@
+@keyframes slide{
+    0%{
+        transform: translate(0,0);
+    }
+    25%{
+        transform: translate(25em,0);
+    }
+    50%{
+        transform:translate(50em,0);
+    }
+    75%{
+        transform: translate(75em,0);
+    }
+    100%{
+        transform: translate(100em,0);
+    }
+
+}
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/*styling links*/
+a:link{
+    color: white;
+
+
+}
+a:visited{
+
+    color: rgb(250, 244, 244);
+    
+}
+a:hover{
+    background-color: #d1a861;
+    color: white;
+
+
+}
+a:active{
+    background-color: brown;
+    color: white;
+
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+header{
+    position: fixed;
+}
+header,footer{
+    width: 100dvw;
+    height: 150px;
+    background-image:linear-gradient(to left, #261b00,#d1a861);
+    color: burlywood;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+.hero{
+    margin-top: 0;
+    background-color: #8b7335;
+    min-height: 650px;
+    padding-top: 200px;
+    color: #926a06;
+    display: flex;
+    align-items: center;
+    
+}
+/*styling the image which is the animated one*/
+.pic img{
+    width:400px;
+    height: 400px;
+    border-radius: 25px;
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 2;
+}
+.introduction{
+    background-color: #8b7335;
+    color: azure;
+    font-size: large;
+    height: 600px;
+    border-top: 5px solid #261b00;
+}
+p{
+    width: 600px;
+    padding-top: 50px;
+    border-right: 5px solid rgb(80, 47, 5);
+    border-radius: 25px;
+    padding: 25px;
+    font-family: 'Playwrite+IE', cursive;
+}
+/*display image and text in a row*/
+.displey{
+    display: flex;
+    justify-content: space-between;
+}
+.displey img{
+    width: 500px;
+    height: 500px;
+}
+@media screen and (max-width: 768px) {
+    
+    /* 1. Header & Navigation */
+    header, footer {
+        height: auto;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap; /* Allows links to wrap to a second line if needed */
+    }
+
+    /* 2. Hero & Animation Fix */
+
+    @keyframes slide {
+        0%   { transform: translate(0, 0); }
+        50%  { transform: translate(20%, 0); } 
+        100% { transform: translate(0, 0); }
+    }
+
+    .pic img {
+        width: 100%; /* Make image responsive */
+        height: auto;
+        max-width: 300px; /* Prevent it from getting too large */
+    }
+
+    /* 3. Introduction & Display Section */
+    .displey {
+        flex-direction: column; /* Stacks the image and text vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .displey img {
+        width: 90%; 
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    p {
+        width: 90%; 
+        padding: 15px;
+        border-right: none;
+        border-bottom: 5px solid rgb(80, 47, 5); /* Move the border to the bottom */
+        
+
+    }
+
+    .hero, .introduction {
+        height: auto;
+        padding: 40px 10px;
+        min-height: auto;
+    }
+
+}

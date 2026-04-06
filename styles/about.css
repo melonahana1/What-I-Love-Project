@@ -1,0 +1,171 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/*styling links*/
+a:link{
+    color: white;
+
+
+}
+a:visited{
+
+    color: rgb(250, 244, 244);
+    
+}
+a:hover{
+    background-color: #d1a861;
+    color: white;
+
+
+}
+a:active{
+    background-color: brown;
+    color: white;
+
+
+}
+/*display links horizontaly*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+header{
+    position: fixed;
+}
+/*styling footer and header*/
+header,footer{
+    width: 100dvw;
+    height: 150px;
+    background-image:linear-gradient(to left, #261b00,#d1a861);
+    color: burlywood;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+.section1{
+    background-color: #8b7335;
+    height: 600px;
+    padding-top: 200px;
+}
+.div1{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+
+}
+.div1 div{
+    width: 500px;
+    border: 5px rgb(70, 51, 22) solid;
+    border-radius:25px ;
+    color: beige;
+    padding: 50px;
+    font-family: 'Smooch Sans', sans-serif;
+
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*style table*/
+table{
+    border-collapse: collapse;
+    margin: 30px;
+    font-size:1em ;
+    min-width: 600px;
+    margin-left: 300px;
+}
+table th{
+    background-color: #926a06;
+    color: bisque;
+    text-align: left;
+    font-weight: bold;
+}
+table th,td{
+    padding: 12px 15px;
+}
+td{
+    border-bottom: 1px solid #261b00;
+}
+table tr:nth-of-type(odd){
+    background-color: #d1a861;
+}
+tr:last-of-type{
+    border-bottom:2px solid  #926a06;
+}
+.section2{
+    height: 500px;
+    color: beige;
+    background-color: #8b7335;
+    font-family: ;
+
+}
+
+
+
+@media (max-width: 768px) {
+    
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Adjust header/footer height for smaller screens */
+    header, footer {
+        height: auto;
+        padding: 20px 0;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Fix the sections to be flexible */
+     .section2 {
+        height: auto; /* Remove fixed heights */
+        padding: 100px 20px 40px 20px; /* Adjust top padding for fixed header */
+    }
+    .section1{
+        height: auto;
+        padding: 300px 20px 40px 20px;
+    }
+
+    /* Make the content divs take full width */
+    .div1 div {
+        width: 100%;
+        margin: 10px 0;
+        padding: 20px;
+        height: auto;
+
+    }
+    .div1{
+        flex-direction: column;
+    }
+
+    /* Table Responsiveness */
+    table {
+        margin-left: 0; 
+        min-width: 100%;
+        font-size: 0.9em;
+    }
+
+    /* Allow table to scroll horizontally if it's too wide */
+    .section1 {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further font adjustments for very small phones */
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    table th, table td {
+        padding: 8px 5px;
+    }
+}
+
